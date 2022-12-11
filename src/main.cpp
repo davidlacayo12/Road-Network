@@ -59,22 +59,31 @@ int main() {
 
         switch(algorithm) {
             case(1): {  //BFS
-               cout << "Route passing through fewest cities, step by step: " << endl;
+                cout << "Route passing through fewest cities, step by step: " << endl;
+                auto start = high_resolution_clock::now();
                 g.findShortestPathBFS(src, dest);
                 cout << endl;
-                break; 
+                auto stop = high_resolution_clock::now();
+                auto duration = duration_cast<seconds>(stop -start);
+                cout << "BFS takes " << duration.count() << " seconds to run." << endl;
+                break;
             }    
             case(2): {  //Dijkstra
+                cout << "Shortest Distance to Location: " << endl;
+                auto start = high_resolution_clock::now();
                 dijkstraV = g.dijkstra(src, dest);
+                auto stop = high_resolution_clock::now();
+                auto duration = duration_cast<seconds>(stop -start);
+                cout << "Dijkstras takes " << duration.count() << " seconds to run." << endl;
                 break;
             }  
             case(3): {   //Pagerank --> currently does not work
-                // cout << "List of Cities From Most Popular to Least Popular:" << endl;
-                // auto start = high_resolution_clock::now();
-                // g.pageRank();
-                // auto stop = high_resolution_clock::now();
-                // auto duration = duration_cast<seconds>(stop -start);
-                // cout << "PageRank takes " << duration.count() << " seconds to run." << endl;
+                cout << "List of Cities From Most Popular to Least Popular:" << endl;
+                auto start = high_resolution_clock::now();
+                g.pageRank(src, dest);
+                auto stop = high_resolution_clock::now();
+                auto duration = duration_cast<seconds>(stop -start);
+                cout << "PageRank takes " << duration.count() << " seconds to run." << endl;
                 break;
             }        
             default: {

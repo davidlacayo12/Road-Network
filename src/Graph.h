@@ -37,7 +37,7 @@ class Graph {
         vector<int> printDijkstra(vector<int> distance, vector<int> parent, int d);
 
         vector<int> pageRank();
-        vector<int> pageRank(int numIter, double damping);
+        vector<int> pageRank(int src, int dest);
         vector<vector<double>> stochastic(const vector<vector<int>>& adjMatrix);
 };
 void scaleMatrix(vector<vector<double>>& matrix, double scalar);

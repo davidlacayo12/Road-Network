@@ -1,6 +1,9 @@
 # Fantastic-roads225
 
 - Organization: 
+    - Link to 10k Matrix: https://drive.google.com/file/d/1WfgX9HDBK0wrgJcXPwWdNcL0xOTRAkCI/view?usp=sharing
+    - Link to video presentation: https://youtu.be/lnGS0h0pUO8
+
     - Development Logs contain weekly goals and updates across the team
     - src directory contains: 
         - data225.cpp: file that processes and cleans the road network dataset -- also constructs the adjacency matrix with that data.
